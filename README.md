@@ -3,7 +3,7 @@ un script en pyhton que unicamente lee G00 y G01 para crear una interpolacion li
 no esta diseñado para funcionar bien, solo es una prueba para entender un poco mejor el funcionamineto basico de una cnc<br />
 si lo que quiere es un firmware funcional, por favor visite este video: https://www.youtube.com/watch?v=fFp9MaTRyE4
 ***
-### desventajas
+### Desventajas
 * Solo funciona con cordenadas absolutas, incrementales no funcionaran.
 * El escript no trasforma milimetros a pasos, por lo que tendra que acerlo usted al hora de crear el codigo g;<br />
 G00 X 0.00 Y 0.00
@@ -12,7 +12,7 @@ el eje x se movera 5 pasos, no 5 milimetros
 * unicamente acepta movimiento lineal G00 y G01 y no cambia la velocidad entre estos
 ***
 ### Ejecucion:
-entre en el script y especifique la ruta y nombre del archivo codigo G en la linea 3:
+entre en el script GcodeReader.py, y especifique la ruta y nombre del archivo codigo G en la linea 3:
 ```python
 nombre="/ruta/nombreArchivo.extencion"
 ```
