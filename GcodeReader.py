@@ -6,12 +6,12 @@ archivo= open(nombre,mode="r")
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 
-GPIO.setup(13, GPIO.OUT) #direccion 1 s
-GPIO.setup(11, GPIO.OUT) #pasos  1 s
-GPIO.setup(15, GPIO.OUT) #enable s
+GPIO.setup(8, GPIO.OUT) # pasos X
+GPIO.setup(10, GPIO.OUT) #direccion X
+GPIO.setup(13, GPIO.OUT) #direccion Y 
+GPIO.setup(11, GPIO.OUT) #pasos  Y 
+GPIO.setup(15, GPIO.OUT) #enable 
 GPIO.setup(33, GPIO.OUT) #servo motor 
-GPIO.setup(8, GPIO.OUT) # pasos 2
-GPIO.setup(10, GPIO.OUT) #direccion 2
 
 servo=GPIO.PWM(33,50)
 servo.start(0)
@@ -83,13 +83,13 @@ def linea(x1,y1,x2,y2):
         x=i[0]
         y=i[1]
         if x>xa:
-            girar(2,8,1)
+            girar(1,8,1)
         if x<xa:
-            girar(2,8,0)
+            girar(1,8,0)
         if y>ya:
-            girar(3,11,1)
+            girar(1,11,1)
         if y<ya:
-            girar(3,11,0)
+            girar(1,11,0)
         xa=i[0]
         ya=i[1]
         
